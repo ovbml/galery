@@ -1,0 +1,11 @@
+@import "mixins.scss";
+
+.logo-name {
+    position: absolute;
+    @include adaptiv-value('right', 60, 20);
+    @include adaptiv-value('bottom', 40, 20);
+    @include adaptiv-value('font-size', 40, 30);
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    opacity: 0.5;
+}
