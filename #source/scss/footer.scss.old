@@ -1,0 +1,37 @@
+@import "mixins.scss";
+
+.footer {
+    background-color: #1F2023;
+
+    &__body {
+        margin: 0 auto;
+        padding: 20px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        > * {
+            margin-right: 10px;
+        }
+        @media screen and (max-width: 426px) {
+            justify-content: space-between;
+        }
+    }
+
+    &__contacts {
+        position: static;
+        flex: 0 0 auto;
+        .contacts__label {
+            @include adaptiv-value('margin-right', 20, 10)
+        }
+    }
+
+    &__logo-name {
+        position: static;
+        text-align: right;
+        @include adaptiv-value('font-size', 30, 20);
+        text-align: center;
+    }
+}
